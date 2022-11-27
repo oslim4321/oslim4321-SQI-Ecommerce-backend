@@ -6,6 +6,9 @@ const Stripe = require('../controllers/Stripe')
 
 
 productRoute.post('/stripe', Stripe.Stripe)
+
+
+productRoute.get('/', product.getAll)
 productRoute.get('/:id', product.getSingle)
 
 
