@@ -6,11 +6,6 @@ const Stripe = require('../controllers/Stripe')
 
 
 productRoute.post('/stripe', Stripe.Stripe)
-
-// productRoute.post('/', product.NewItem)
-// productRoute.patch('/:id', varifyTokenAndAdmin, product.Update)
-// productRoute.delete('/:id', varifyTokenAndAdmin, product.delete)
-productRoute.get('/', product.getAll)
 productRoute.get('/:id', product.getSingle)
 
 

@@ -1,42 +1,5 @@
 const ProductSchema = require('../model/Product')
-const Accesories = require('../model/Accesories')
-// module.exports.NewItem = async (req, res) => {
-//     const products = req.body;
 
-//     try {
-//         const Post = await ProductSchema.create(products)
-//         res.status(200).json(Post)
-//     } catch (error) {
-
-//         res.status(400).json('CAnt Post Item')
-
-//     }
-// }
-
-// module.exports.Update = async (req, res) => {
-//     try {
-//         const UpdatedProduct = await ProductSchema.findByIdAndUpdate(req.params.id, req.body, {
-//             new: true,
-//             runValidators: true,
-//         }
-//         );
-
-//         res.status(200).json(UpdatedProduct)
-//     } catch (error) {
-
-//     }
-// }
-
-
-// module.exports.delete = async (req, res) => {
-//     try {
-//         await ProductSchema.findByIdAndDelete(req.params.id)
-//         res.status(200).json('user deleted successful')
-//     } catch (error) {
-//         res.status(500).json('failed to delete')
-
-//     }
-// }
 
 
 /* get single product */

@@ -1,4 +1,3 @@
-const { compareSync } = require('bcrypt');
 const OrderSchema = require('../model/Order')
 
 
