@@ -39,7 +39,7 @@ module.exports.Login = async (req, res) => {
         const { password, ...others } = user._doc
 
         res.status(200).json({ ...others, token: token })
-        // console.log({ ...others })
+        // ({ ...others })
 
     } catch (error) {
         const err = handleLoginErr(error)

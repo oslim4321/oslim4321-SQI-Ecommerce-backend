@@ -5,7 +5,7 @@ const axios = require('axios')
 // const productSchema = require('./model/Product')
 const Accesories = require('./model/Accesories')
 
-// console.log(process.env.MANGO_URL, 'mee')
+// (process.env.MANGO_URL, 'mee')
 const start = async () => {
     try {
         const doSom = async () => {
@@ -28,7 +28,7 @@ const start = async () => {
                 await connectDB(process.env.MANGO_URL)
                 await Accesories.deleteMany()
                 await Accesories.create(data)
-                console.log('all item populated')
+                    ('all item populated')
             }
 
             process.exit(0)
@@ -36,7 +36,7 @@ const start = async () => {
         doSom()
 
     } catch (error) {
-        console.log(error)
+        (error)
         process.exit(1)
     }
 

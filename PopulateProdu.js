@@ -5,7 +5,7 @@ const fetch = require('node-fetch');
 // const productSchema = require('./model/Product')
 // const Accesories = require('./model/Accesories')
 
-// console.log(process.env.MANGO_URL, 'mee')
+// (process.env.MANGO_URL, 'mee')
 const start = async () => {
     let Phones = []
     try {
@@ -23,11 +23,11 @@ const start = async () => {
 
             fetch(url, options)
                 .then(res => res.json())
-                .then(json => console.log(json.data))
+                .then(json => (json.data))
                 .catch(err => console.error('error:' + err));
             // if (Phones) {
             //     Phones.map((elem) => (
-            //         console.log(elem)
+            //         (elem)
             // {
             //     title: elem.name,
             //     category: elem.brand,
@@ -42,7 +42,7 @@ const start = async () => {
             // await connectDB(process.env.MANGO_URL)
             // // await Accesories.deleteMany()
             // await productSchema.create(data)
-            // console.log('all item populated')
+            // ('all item populated')
 
             // }
 
@@ -51,7 +51,7 @@ const start = async () => {
         doSom()
 
     } catch (error) {
-        console.log(error)
+        (error)
         process.exit(1)
     }
 
