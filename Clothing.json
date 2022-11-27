@@ -1,0 +1,26 @@
+{
+    "suggestionGroups": [
+        {
+            "indexName": "searchterms",
+            "indexTitle": "searchterms",
+            "suggestions": [
+                {
+                    "searchTerm": "bikini top",
+                    "numberOfResults": 2639
+                },
+                {
+                    "searchTerm": "underwire bikini top",
+                    "numberOfResults": 421
+                },
+                {
+                    "searchTerm": "black bikini top",
+                    "numberOfResults": 534
+                },
+                {
+                    "searchTerm": "white bikini top",
+                    "numberOfResults": 218
+                }
+            ]
+        }
+    ]
+}
