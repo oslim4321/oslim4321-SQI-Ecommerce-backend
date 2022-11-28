@@ -52,7 +52,7 @@ app.get('/', async (req, res) => {
   res.send('This is backend ruuning on node.js')
 })
 
-const port = process.env.PORT || 3410
+const port = process.env.PORT || 3400
 
 const start = async () => {
   try {
