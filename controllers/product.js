@@ -67,6 +67,9 @@ module.exports.getAll = async (req, res) => {
         else if (req.query.size) {
             products = await ProductSchema.find({ size: { "$in": [req.query.size] } }).sort({ createdAt: -1 }).limit(limit)
         }
+        else if (req.query.category) {
+            products = await ProductSchema.find({ category: { "$in": [req.query.category] } }).sort({ createdAt: -1 }).limit(limit)
+        }
         else if (req.query.search) {
             let regex = [new RegExp(`^${req.query.search}$`, 'i')]
             products = await ProductSchema.find({
