@@ -7,6 +7,21 @@ const Accesories = require('../model/Accesories')
 
 
 
+/* get related product */
+module.exports.getRelatedProd = async (req, res) => {
+    console.log(req.params.id)
+    console.log(req.url)
+    try {
+        const data = await ProductSchema.find({ category: { "$in": [req.params.id] } }).limit(10)
+        res.status(200).json(data)
+    } catch (error) {
+        res.status(500).json('failed to get related products')
+        console.log(error)
+
+    }
+}
+
+
 /* get single product */
 module.exports.getSingle = async (req, res) => {
 

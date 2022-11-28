@@ -10,6 +10,8 @@ productRoute.post('/stripe', Stripe.Stripe)
 
 productRoute.get('/', product.getAll)
 productRoute.get('/:id', product.getSingle)
+productRoute.get('/related/:id', product.getRelatedProd)
+
 
 
 
