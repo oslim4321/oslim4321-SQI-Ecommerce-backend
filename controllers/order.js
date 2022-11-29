@@ -5,7 +5,7 @@ const OrderSchema = require('../model/Order')
 /* get the post order request an save to database */
 module.exports.OrderPost = async (req, res) => {
     const Orders = req.body;
-    (req.body, 'the body')
+
     try {
         const OrderSave = await OrderSchema.create(Orders)
         res.status(200).json(OrderSave)
@@ -20,7 +20,6 @@ module.exports.OrderPost = async (req, res) => {
 
 /* get single user Order */
 module.exports.getSingleOrder = async (req, res) => {
-    (req.userId)
     try {
         const cart = await OrderSchema.find({ userId: req.params.userId })
         res.status(200).json(cart)

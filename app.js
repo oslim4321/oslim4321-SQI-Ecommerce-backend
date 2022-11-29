@@ -3,9 +3,6 @@ require('express-async-errors');
 const cors = require('cors')
 const connectDB = require('./db/connect')
 const cookieParser = require('cookie-parser');
-const fetch = require('node-fetch');
-const fs = require("fs");
-const OrderSchema = require('./model/Order')
 /* import Extra security middleware */
 const helmet = require('helmet')
 const xss = require('xss-clean')
@@ -52,7 +49,7 @@ app.get('/', async (req, res) => {
   res.send('This is backend ruuning on node.js')
 })
 
-const port = process.env.PORT || 3400
+const port = process.env.PORT || 3410
 
 const start = async () => {
   try {

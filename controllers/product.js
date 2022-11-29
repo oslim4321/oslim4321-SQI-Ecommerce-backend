@@ -50,7 +50,6 @@ module.exports.getAll = async (req, res) => {
     const limit = Number(req.query.limit) || 20;
     const skip = (page - 1) * limit;
 
-    (req.query)
     try {
         let products
         if (qnewProd) {
