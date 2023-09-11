@@ -15,7 +15,7 @@ const corsOptions = {
   origin: true, //included origin as true
   credentials: true, //included credentials as true
 };
-app.use(cors(corsOptions))
+app.use(cors())
 
 
 const userRoute = require('./routes/user')
