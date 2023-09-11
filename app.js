@@ -11,11 +11,16 @@ const rateLimit = require('express-rate-limit')
 
 const express = require('express');
 const app = express();
+// const corsOptions = {
+//   origin: true, //included origin as true
+//   credentials: true, //included credentials as true
+// };
+
 const corsOptions = {
-  origin: true, //included origin as true
-  credentials: true, //included credentials as true
+  origin: 'https://sqi-final-ecommece-project.netlify.app/', // Replace with your frontend domain
+  credentials: true,
 };
-app.use(cors())
+app.use(cors(corsOptions))
 
 
 const userRoute = require('./routes/user')
@@ -63,4 +68,3 @@ const start = async () => {
 };
 
 start();
-
