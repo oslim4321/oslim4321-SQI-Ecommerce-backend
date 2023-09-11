@@ -17,8 +17,9 @@ const app = express();
 // };
 
 const corsOptions = {
-  origin: 'https://sqi-final-ecommece-project.netlify.app',
-  // credentials: true,
+  origin: '*', // This allows requests from any origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow all HTTP methods
+  credentials: true, // Include credentials (e.g., cookies)
 };
 app.use(cors(corsOptions))
 
