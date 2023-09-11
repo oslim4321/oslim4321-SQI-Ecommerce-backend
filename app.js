@@ -17,8 +17,8 @@ const app = express();
 // };
 
 const corsOptions = {
-  origin: 'https://sqi-final-ecommece-project.netlify.app', // Replace with your frontend domain
-  credentials: true,
+  origin: 'https://sqi-final-ecommece-project.netlify.app',
+  // credentials: true,
 };
 app.use(cors(corsOptions))
 
