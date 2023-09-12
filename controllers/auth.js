@@ -58,7 +58,6 @@ module.exports.Login = async (req, res) => {
     } catch (error) {
         const err = handleLoginErr(error)
         res.status(404).json(err)
-        console.log(error);
         // res.status(500).json(error)
 
     }

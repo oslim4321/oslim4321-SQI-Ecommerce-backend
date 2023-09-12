@@ -17,11 +17,10 @@ const app = express();
 // };
 
 const corsOptions = {
-  origin: '*', // This allows requests from any origin
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow all HTTP methods
-  credentials: true, // Include credentials (e.g., cookies)
+  origin: 'https://sqi-frontend-ecommerce.vercel.app', // Replace with your frontend domain
+  credentials: true,
 };
-app.use(cors())
+app.use(cors(corsOptions))
 
 
 const userRoute = require('./routes/user')
