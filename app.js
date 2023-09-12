@@ -21,7 +21,7 @@ const corsOptions = {
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow all HTTP methods
   credentials: true, // Include credentials (e.g., cookies)
 };
-app.use(cors(corsOptions))
+app.use(cors())
 
 
 const userRoute = require('./routes/user')

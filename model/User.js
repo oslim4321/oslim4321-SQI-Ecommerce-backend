@@ -41,7 +41,9 @@ UserSchema.pre('save', async function (next) {
 })
 
 UserSchema.statics.login = async function (email, password) {
-    const user = await this.findOne({ email })
+    const user = await this.findOne({
+        email
+    })
     if (user) {
         const auth = await bcrypt.compare(password, user.password)
         if (auth) {
@@ -54,4 +56,3 @@ UserSchema.statics.login = async function (email, password) {
 
 
 module.exports = mongoose.model('Users', UserSchema)
-
