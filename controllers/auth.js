@@ -1,10 +1,16 @@
 const UserSchema = require('../model/User')
-const { handleErr, handleLoginErr } = require('../errors/custom-error')
+const {
+    handleErr,
+    handleLoginErr
+} = require('../errors/custom-error')
 const jwt = require('jsonwebtoken')
 
 
 const createToken = (id, admin) => {
-    return jwt.sign({ id, admin }, process.env.JWT_SEC, {
+    return jwt.sign({
+        id,
+        admin
+    }, process.env.JWT_SEC, {
         expiresIn: process.env.JWT_LIFETIME
     })
 }
@@ -17,7 +23,9 @@ module.exports.Register = async (req, res) => {
         //     id: data._id,
         //     isAdmin: data.isAdmin
         // })
-        res.status(200).json({ success: 'Account created success' })
+        res.status(200).json({
+            success: 'Account created success'
+        })
     } catch (error) {
         const err = handleErr(error)
         res.status(500).json(err)
@@ -36,15 +44,21 @@ module.exports.Login = async (req, res) => {
             id: user._id,
             isAdmin: user.isAdmin
         })
-        const { password, ...others } = user._doc
+        const {
+            password,
+            ...others
+        } = user._doc
 
-        res.status(200).json({ ...others, token: token })
+        res.status(200).json({
+            ...others,
+            token: token
+        })
         // ({ ...others })
 
     } catch (error) {
         const err = handleLoginErr(error)
         res.status(404).json(err)
-
+        console.log(error);
         // res.status(500).json(error)
 
     }
